@@ -14,10 +14,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "declaration": true,
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "incremental": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "pretty": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "importsNotUsedAsValues": "remove",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src", "typings/**/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json"}]
 }
