@@ -19,6 +19,8 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'jest',
+    'prettier',
+    "simple-import-sort",
     'import',
     'unused-imports'
   ],
@@ -73,6 +75,9 @@ module.exports = {
     'import/no-dynamic-require': 0,
     'import/no-absolute-path': 0,
     'import/extensions': 0,
+    'import/first': 1,
+    'import/newline-after-import': 1,
+    'import/no-duplicates': 1,
 
     // 一部分文件在導入devDependencies的依赖時不報錯
     'import/no-extraneous-dependencies': [
@@ -89,20 +94,9 @@ module.exports = {
     ],
 
     // 模塊導入順序規則
-    'import/order': [
-      2,
-      {
-        pathGroups: [
-          {
-            pattern: '@/**',
-            group: 'external',
-            position: 'after',
-          },
-        ],
-        'newlines-between': 'always-and-inside-groups',
-        warnOnUnassignedImports: true,
-      },
-    ],
+    'simple-import-sort/imports': 1,
+    'simple-import-sort/exports': 1,
+
     // 自動刪除未使用的導入
     // https://github.com/sweepline/eslint-plugin-unused-imports
     'no-unused-vars': 0,
@@ -140,7 +134,6 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 0,
     '@typescript-eslint/no-unsafe-call': 0,
     '@typescript-eslint/no-unsafe-argument': 0,
-    // '@typescript-eslint/no-shadow': 0,
 
     /* ********************************** React and Hooks ********************************** */
     'react/jsx-uses-react': 1,
