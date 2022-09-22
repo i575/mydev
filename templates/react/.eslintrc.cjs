@@ -59,6 +59,7 @@ module.exports = {
     'no-continue': 0,
     'no-await-in-loop': 0,
     'no-return-await': 0,
+    'no-unused-vars': 0,
     'no-multi-assign': 0,
     'no-param-reassign': [2, { props: false }],
     'max-classes-per-file': 0,
@@ -99,8 +100,6 @@ module.exports = {
 
     // 自動刪除未使用的導入
     // https://github.com/sweepline/eslint-plugin-unused-imports
-    'no-unused-vars': 0,
-    '@typescript-eslint/no-unused-vars': 0,
     'unused-imports/no-unused-imports': 1,
     'unused-imports/no-unused-vars': [
       'error',
@@ -112,6 +111,7 @@ module.exports = {
     ],
 
     /* ********************************** Typescript ********************************** */
+    '@typescript-eslint/no-unused-vars': 0,
     '@typescript-eslint/no-empty-interface': 0,
     '@typescript-eslint/no-this-alias': 0,
     '@typescript-eslint/no-var-requires': 0,
