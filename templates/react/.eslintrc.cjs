@@ -16,6 +16,9 @@ module.exports = {
     jest: true,
     node: true,
   },
+  settings: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts', '.json'],
+  },
   plugins: [
     '@typescript-eslint',
     'jest',
@@ -166,8 +169,5 @@ module.exports = {
         },
       },
     ],
-  },
-  settings: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts', '.json'],
   },
 }
