@@ -6,7 +6,7 @@
   "bin": "./_bin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "link": "npm link",
+    "install": "npm link",
     "unlink": "npm unlink bintest",
     "start": "bintest"
   },
@@ -14,7 +14,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "^9.4.0"
+    "commander": "^9.4.0",
+    "dotenv": "^16.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.7.18"
