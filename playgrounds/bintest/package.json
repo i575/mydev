@@ -1,0 +1,22 @@
+{
+  "name": "bintest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "./_bin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "link": "npm link",
+    "unlink": "npm unlink bintest",
+    "start": "bintest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18"
+  }
+}
