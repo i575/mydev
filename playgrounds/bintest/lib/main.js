@@ -15,3 +15,5 @@
 
 */
 
+require('./apps/download-server')
+require('./apps/file-watch')
