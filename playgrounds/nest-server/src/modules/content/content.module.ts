@@ -1,11 +1,25 @@
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { PostController } from '@/modules/content/controllers/post.controller';
-import { PostService } from '@/modules/content/services/post.service';
+import { CoreModule } from '../core/core.module';
+import { PostController } from './controllers';
+import { CreatePostDto, UpdatePostDto } from './dtos';
+import { PostEntity } from './entities/post.entity';
+import { PostRepository } from './repositories';
+import { PostService } from './services';
 
 @Module({
-  providers: [PostService],
+  imports: [
+    TypeOrmModule.forFeature([PostEntity]),
+    // 註冊自定義Repository
+    CoreModule.forRepository([PostRepository]),
+  ],
+  providers: [PostService, CreatePostDto, UpdatePostDto],
   controllers: [PostController],
-  exports: [PostService],
+  exports: [
+    PostService,
+    // 導出自定義Repository
+    CoreModule.forRepository([PostRepository]),
+  ],
 })
 export class ContentModule {}
